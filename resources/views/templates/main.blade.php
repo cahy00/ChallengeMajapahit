@@ -7,13 +7,21 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+		<style>
+			body{
+				font-size: 30px;
+			}
+		</style>
     <title>Hello, world!</title>
   </head>
   <body>
 
 		<section class="header">
 			@include('templates.navbar')
+		</section>
+
+		<section class="content">
+			@yield('content')
 		</section>
 
     <!-- Optional JavaScript; choose one of the two! -->
