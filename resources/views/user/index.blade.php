@@ -44,6 +44,9 @@
 						</tbody>
 					</table>
 				</div>
+				<div class="card-footer">
+					{{$user->links()}}
+				</div>
 			</div>
 		</div>
 	</div>
