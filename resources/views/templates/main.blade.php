@@ -20,9 +20,13 @@
 			@include('templates.navbar')
 		</section>
 
-		<section class="content">
-			@yield('content')
-		</section>
+		<div class="content-wrapper">
+			<section class="content">
+				<div class="container-fluid">
+					
+				</div>
+			</section>
+		</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
