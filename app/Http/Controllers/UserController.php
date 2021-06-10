@@ -14,8 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-				$user = User::get()->paginate(5);
-        return view('user.index');
+				$user = User::first()->paginate(5);
+        return view('user.index', \compact('user'));
     }
 
     /**
