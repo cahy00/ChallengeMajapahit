@@ -12,7 +12,7 @@
 						<a class="nav-link" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">User</a>
+						<a class="nav-link" href="/user">User</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Hadiah</a>
