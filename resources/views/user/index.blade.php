@@ -19,7 +19,7 @@
 		<div class="col-md">
 			<div class="card">
 				<div class="card-header bg-primary">
-					<h3 class="card-title">Data</h3>
+					<h3 class="card-title">User</h3>
 				</div>
 				<div class="card-body">
 					<table class="table table-bordered">
@@ -37,8 +37,8 @@
 								<td>Cahyo</td>
 								<td>50</td>
 								<td>
-									<a href="" class="btn btn-danger">Edit</a>
-									<a href="" class="btn btn-warning">Delete</a>
+									<a href="" class="btn btn-warning">Edit</a>
+									<a href="" class="btn btn-danger">Delete</a>
 								</td>
 							</tr>
 						</tbody>
