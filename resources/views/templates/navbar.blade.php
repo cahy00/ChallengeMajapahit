@@ -14,6 +14,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">User</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Hadiah</a>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Transaksi
@@ -24,9 +27,6 @@
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item" href="#">Point</a></li>
 						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Hadiah</a>
 					</li>
 				</ul>
 				<form class="d-flex">
