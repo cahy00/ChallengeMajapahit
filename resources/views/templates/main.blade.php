@@ -10,8 +10,14 @@
 		<style>
 			body{
 				font-size: 20px;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 
+			}
+
+			footer{
+				margin-top: 300px;
+				margin-left: 50px;
+				text-align: center;
 			}
 		</style>
 		@yield('style')
@@ -27,8 +33,14 @@
 			<section class="content">
 					@yield('content')
 			</section>
+
+
+
+			@include('templates.footer')
 		</div>
 
+
+		
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
