@@ -17,6 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->id();
 						$table->unsignedBigInteger('user_id');
 						$table->unsignedBigInteger('merchandise_id');
+						$table->enum('status', ['success', 'pending', 'fail']);
             $table->timestamps();
         });
     }
