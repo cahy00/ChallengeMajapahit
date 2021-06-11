@@ -17,9 +17,6 @@
 					<li class="nav-item">
 						<a class="nav-link" href="/merchandise">Barang</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Hadiah</a>
-					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Transaksi
@@ -28,7 +25,7 @@
 							<li><a class="dropdown-item" href="#">Riwayat Transaksi</a></li>
 							<li><a class="dropdown-item" href="#">POS</a></li>
 							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="#">Point</a></li>
+							<li><a class="dropdown-item" href="#">Hadiah</a></li>
 						</ul>
 					</li>
 				</ul>
