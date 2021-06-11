@@ -41,7 +41,7 @@
 									<label for="">Barang</label>
 									<select name="merchandise_id" id="" class="form-control">
 										@foreach ($merchandise as $item)
-										<option value="{{$item->id}}">{{$item->name}}</option>
+										<option value="{{$item->id}}"><a href="{{route('merchandise.create', $item->id)}}"></a>{{$item->name}}</option>
 										@endforeach
 									</select>
 								</div>
