@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Merchandise;
 
 class TransactionController extends Controller
 {
@@ -23,7 +25,8 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        return view('transaction.create');
+				$user = User::get(); 
+        return view('transaction.create', compact('user'));
     }
 
     /**
@@ -34,7 +37,7 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

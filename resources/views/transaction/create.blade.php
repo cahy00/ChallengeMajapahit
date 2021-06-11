@@ -28,7 +28,9 @@
 								<div class="form-group">
 									<label for="">User</label>
 									<select name="user_id" id="" class="form-control">
-										<option value="">Cahyo</option>
+										@foreach ($user as $item)
+										<option value="{{$item->id}}">{{$item->name}}</option>
+										@endforeach
 									</select>
 								</div>
 
