@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Merchandise;
 
 class MerchandiseController extends Controller
 {
@@ -13,7 +14,8 @@ class MerchandiseController extends Controller
      */
     public function index()
     {
-        //
+        $data = Merchandise::first()->paginate(10);
+				return view('merchandise.index', compact('data'));
     }
 
     /**

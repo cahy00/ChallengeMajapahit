@@ -32,11 +32,11 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach ($user as $item)
+							@foreach ($data as $item)
 							<tr>
-								<td>{{ $loop->iteration + ($user->perPage() * ($user->currentPage() - 1)) }}</td>
+								<td>{{ $loop->iteration + ($data->perPage() * ($data->currentPage() - 1)) }}</td>
 								<td>{{ $item->name }}</td>
-								<td>{{ $item->points }}</td>
+								<td>{{ $item->price }}</td>
 								<td>{{ $item->stock }}</td>
 								<td>
 									<a href="" class="btn btn-warning">Edit</a>
@@ -48,7 +48,7 @@
 					</table>
 				</div>
 				<div class="card-footer">
-					{{$user->links()}}
+					{{$data->links()}}
 				</div>
 			</div>
 		</div>
