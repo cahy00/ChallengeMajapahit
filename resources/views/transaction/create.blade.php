@@ -41,7 +41,7 @@
 									<label for="">Barang</label>
 									<select name="merchandise_id" id="" class="form-control">
 										@foreach ($merchandise as $item)
-										<option value="{{$item->id}}"><a href="{{route('merchandise.create', $item->id)}}"></a>{{$item->name}}</option>
+										<option value="{{$item->id}}">{{$item->name}}</option>
 										@endforeach
 									</select>
 								</div>
@@ -52,7 +52,7 @@
 						<table class="table">
 							<tr>
 								<td>Harga</td>
-								<td><input type="text" id="price" disabled value="Rp.{{$merchandise[0]->price}}"></td>
+								<td><input type="text" id="price" disabled value="Rp.{{$merchandise->first()->price}}"></td>
 							</tr>
 							<tr>
 								<td>Potongan</td>
@@ -69,4 +69,21 @@
 		</div>
 	</div>
 </div>
+@endsection
+
+@section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	function isiOtomatis(){
+			var merchandise = $("#merchandise").val();
+			$.ajax({
+					url: '/transaction',
+					data:"merchandise="+merchandise ,
+			}).success(function (data) {
+					var json = data,
+					obj = JSON.parse(json);
+					$('#price').val(obj.price);
+			});
+	}
+</script>
 @endsection
