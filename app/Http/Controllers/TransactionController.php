@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Merchandise;
+use App\Models\Transaction;
 
 class TransactionController extends Controller
 {
@@ -15,7 +16,8 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return view('transaction.index');
+				$data = Transaction::get();
+        return view('transaction.index', compact('data'));
     }
 
     /**
@@ -41,12 +43,9 @@ class TransactionController extends Controller
         $data = new Transaction;
 				$data->user_id = $request->user_id;
 				$data->merchandise_id = $request->merchandise_id;
-
-				if($data){
-					$data->status = 'success';
-				}
-
+				$data->status = 'success';
 				$data->save();
+
 
 				return 'berhasil';
     }

@@ -52,7 +52,7 @@
 						<table class="table">
 							<tr>
 								<td>Harga</td>
-								<td>Rp 20000000</td>
+								<td><input type="text" id="price" disabled value="Rp.{{$merchandise[0]->price}}"></td>
 							</tr>
 							<tr>
 								<td>Potongan</td>

@@ -25,33 +25,31 @@
 						<thead>
 							<tr>
 								<td>No</td>
+								<td>Nama User</td>
 								<td>Nama Barang</td>
-								<td>Harga</td>
-								<td>Stock</td>
-								<td>Action</td>
+								<td>Status</td>
+								<td>Tgl Transaksi</td>
 							</tr>
 						</thead>
 						<tbody>
 							@foreach ($data as $item)
 							<tr>
 								<td>{{ $loop->iteration + ($data->perPage() * ($data->currentPage() - 1)) }}</td>
-								<td>{{ $item->name }}</td>
-								<td>{{ $item->price }}</td>
-								<td>{{ $item->stock }}</td>
-								<td>
-									<a href="" class="btn btn-warning">Edit</a>
-									<a href="" class="btn btn-danger">Delete</a>
-								</td>
+								<td>{{ $item->user->name }}</td>
+								<td>{{ $item->merchandise->name }}</td>
+								<td> <span class="badge @if($item->status == 'success') bg-success @else bg-danger @endif">{{$item->status}}</span></td>
+								<td>{{ $item->created_at }}</td>
 							</tr>
 							@endforeach
 						</tbody>
 					</table>
 				</div>
 				<div class="card-footer">
-					{{$data->links()}}
+					{{-- {{$data->links()}} --}}
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 @endsection
+
