@@ -34,7 +34,7 @@
 						<tbody>
 							@foreach ($user as $item)
 							<tr>
-								<td>1</td>
+								<td>{{ $loop->iteration + ($user->perPage() * ($user->currentPage() - 1)) }}</td>
 								<td>{{ $item->name }}</td>
 								<td>{{ $item->points }}</td>
 								<td>
