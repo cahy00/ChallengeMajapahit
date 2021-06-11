@@ -26,7 +26,8 @@ class TransactionController extends Controller
     public function create()
     {
 				$user = User::get(); 
-        return view('transaction.create', compact('user'));
+				$merchandise = Merchandise::get(); 
+        return view('transaction.create', compact('user', 'merchandise'));
     }
 
     /**
