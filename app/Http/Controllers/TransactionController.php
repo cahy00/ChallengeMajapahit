@@ -38,7 +38,17 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $data = new Transaction;
+				$data->user_id = $request->user_id;
+				$data->merchandise_id = $request->merchandise_id;
+
+				if($data){
+					$data->status = 'success';
+				}
+
+				$data->save();
+
+				return 'berhasil';
     }
 
     /**
