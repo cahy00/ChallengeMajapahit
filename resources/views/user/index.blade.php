@@ -32,15 +32,17 @@
 							</tr>
 						</thead>
 						<tbody>
+							@foreach ($user as $item)
 							<tr>
 								<td>1</td>
-								<td>Cahyo</td>
-								<td>50</td>
+								<td>{{ $item->name }}</td>
+								<td>{{ $item->points }}</td>
 								<td>
 									<a href="" class="btn btn-warning">Edit</a>
 									<a href="" class="btn btn-danger">Delete</a>
 								</td>
 							</tr>
+							@endforeach
 						</tbody>
 					</table>
 				</div>
