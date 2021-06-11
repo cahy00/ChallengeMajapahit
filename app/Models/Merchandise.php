@@ -11,5 +11,5 @@ class Merchandise extends Model
 
 		protected $fillable = [
 			'name', 'price', 'stock'
-		]
+		];
 }
