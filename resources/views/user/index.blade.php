@@ -3,8 +3,7 @@
 @section('style')
 <style>
 	.container{
-		margin-bottom: 50px;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+		margin-bottom: 10px;
 
 	}
 

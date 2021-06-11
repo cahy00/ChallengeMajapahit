@@ -10,6 +10,8 @@
 		<style>
 			body{
 				font-size: 20px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
 			}
 		</style>
 		@yield('style')
