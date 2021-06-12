@@ -37,7 +37,7 @@ class MerchandiseController extends Controller
     public function store(Request $request)
     {
 				$validator = Validator::make($request->all, [
-					'name' => 'required',
+					'name'  => 'required',
 					'price' => 'required',
 					'stock' => 'required',
 				]);
@@ -47,7 +47,7 @@ class MerchandiseController extends Controller
 				}
 
 				$data = Merchandise::create([
-					'name' => $request->name,
+					'name'  => $request->name,
 					'price' => $request->price,
 					'stock' => $request->stock,
 				]);
