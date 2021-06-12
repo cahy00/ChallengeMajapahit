@@ -122,10 +122,4 @@ class UserController extends Controller
         //
     }
 
-		public function addPoints($id)
-		{
-				$data = User::create([
-					'points' => 5,
-				]);
-		}
 }
