@@ -20,8 +20,9 @@
 					<h3 class="card-title">User Create</h3>
 				</div>
 				<div class="card-body">
-					<form action="{{route('user.store')}}" method="POST">
+					<form action="{{route('user.update', $user->id)}}" method="POST">
 						@csrf
+						@method('put')
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
