@@ -67,7 +67,7 @@ class UserController extends Controller
 				$user->save();
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil Di Input');
-				
+
 				//aktifkan code berikut untuk penggunaan API
 				// return response()->json([
 				// 	'message' => 'Data Ada',
@@ -124,6 +124,12 @@ class UserController extends Controller
 				]);
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil di Update');
+
+				//aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $user
+				// ]);
     }
 
     /**
