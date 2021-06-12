@@ -45,29 +45,29 @@ class TransactionController extends Controller
 					return redirect()->route('transaction.index')->with('failed', 'Gagal Transaksi Stock tidak cukup');
 				}else{
 					$data = new Transaction;
-				$data->user_id 				= $request->user_id;
-				$data->merchandise_id = $request->merchandise_id;
-				if($data){
-					$data->status = 'success';
-				}else{
-					$data->status = 'failed';
-				}
-				$data->save();
-
-				$condition = true;
-				$i = 5;
-				do {
+					$data->user_id 				= $request->user_id;
+					$data->merchandise_id = $request->merchandise_id;
 					if($data){
-					$user = User::find($request->user_id);
-					$user->update([
-							'points' => $i++
-						]);
-
-						$condition = false;
+						$data->status = 'success';
+					}else{
+						$data->status = 'failed';
 					}
-				} while ($condition);
+					$data->save();
 
-				return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
+					$condition = true;
+					$i = 5;
+					do {
+						if($data){
+						$user = User::find($request->user_id);
+						$user->update([
+								'points' => $i++
+							]);
+
+							$condition = false;
+						}
+					} while ($condition);
+
+					return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
 				}
     }
 
