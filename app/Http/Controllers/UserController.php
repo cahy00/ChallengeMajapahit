@@ -50,12 +50,13 @@ class UserController extends Controller
 						return redirect()->back()->withErrors($validator)->withInput();
 				}
 
-				$user = User::create([
-					'name'     => $request->name,
-					'email'    => $request->email,
-					'password' => \Hash::make($request->password),
-					'points'   => $request->points
-				]);
+				
+				$transaction = Transaction::find(1);
+				$user = new User;
+				$user->name = $request->name;
+				$user->email = $request->email;
+				$user->password = \Hash::make($request->password);
+				$user->save();
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil Di Input');
     }
@@ -104,4 +105,11 @@ class UserController extends Controller
     {
         //
     }
+
+		public function addPoints($id)
+		{
+				$data = User::create([
+					'points' => 5,
+				]);
+		}
 }

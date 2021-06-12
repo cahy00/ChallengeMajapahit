@@ -46,8 +46,9 @@ class TransactionController extends Controller
 				$data->status = 'success';
 				$data->save();
 
-				$credit = 0;
-				$request->request->add(['points' => $credit+5]);
+				if($data){
+					$request->request->add(['points' => 5]);
+				}
 
 				return 'berhasil';
     }
