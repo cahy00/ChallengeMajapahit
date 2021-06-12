@@ -50,13 +50,12 @@ class TransactionController extends Controller
 				}
 				$data->save();
 
-				$user = User::find($request->user_id);
-
 				$condition = true;
 				$i = 5;
 				do {
 					if($data){
-						$user->update([
+					$user = User::find($request->user_id);
+					$user->update([
 							'points' => $i++
 						]);
 
