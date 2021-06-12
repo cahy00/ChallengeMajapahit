@@ -22,6 +22,7 @@
 				</div>
 				<div class="card-body">
 					<a href="{{route('user.create')}}" class="btn btn-primary float-right">Tambah Data</a>
+					<br>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
