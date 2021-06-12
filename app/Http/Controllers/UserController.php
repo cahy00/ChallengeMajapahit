@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-				$user = User::first()->paginate(5);
+				$user = User::first()->paginate(10);
 				// $check = DB::table('transaction')->where('id', $user->id)->first();
         return view('user.index', \compact('user'));
     }
