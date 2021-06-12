@@ -119,7 +119,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+				$user->delete();
+
+				return redirect()->route('user.index')->with('success', 'Data Berhasil di Hapus');
+
     }
 
 }
