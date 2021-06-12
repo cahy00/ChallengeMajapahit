@@ -42,7 +42,7 @@
 								<td>{{ $item->price }}</td>
 								<td>{{ $item->stock }}</td>
 								<td>
-									<a href="" class="btn btn-warning">Edit</a>
+									<a href="{{route('merchandise.edit', $item->id)}}" class="btn btn-warning">Edit</a>
 									<a href="" class="btn btn-danger">Delete</a>
 								</td>
 							</tr>

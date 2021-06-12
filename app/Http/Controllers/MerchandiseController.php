@@ -75,7 +75,8 @@ class MerchandiseController extends Controller
      */
     public function edit($id)
     {
-        //
+				$merchandise = Merchandise::findOrFail($id);
+        return view('merchandise.edit', compact('merchandise'));
     }
 
     /**
