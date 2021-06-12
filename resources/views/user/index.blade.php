@@ -40,7 +40,7 @@
 								<td>{{ $item->name }}</td>
 								<td>{{ $item->points }}</td>
 								<td>
-									<a href="" class="btn btn-warning">Edit</a>
+									<a href="{{route('user.edit', $item->id)}}" class="btn btn-warning">Edit</a>
 									<a href="" class="btn btn-danger">Delete</a>
 								</td>
 							</tr>
