@@ -26,21 +26,21 @@
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="">Nama Barang</label>
-									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan name">
+									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan name" value="{{$merchandise->name}}">
 									<span class="error invalid-feedback">{{$errors->first('name')}}</span>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="">Price</label>
-									<input type="number" name="price" class="form-control {{$errors->first('price') ? 'is-invalid' : ''}}" placeholder="Masukkan price">
+									<input type="number" name="price" class="form-control {{$errors->first('price') ? 'is-invalid' : ''}}" placeholder="Masukkan price" value="{{$merchandise->price}}">
 									<span class="error invalid-feedback">{{$errors->first('price')}}</span>
 								</div>
 							</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label for="">Stock</label>
-										<input type="number" name="stock" class="form-control {{$errors->first('stock') ? 'is-invalid' : ''}}" placeholder="Masukkan stock">
+										<input type="number" name="stock" class="form-control {{$errors->first('stock') ? 'is-invalid' : ''}}" placeholder="Masukkan stock" value="{{$merchandise->stock}}">
 										<span class="error invalid-feedback">{{$errors->first('stock')}}</span>
 									</div>
 								</div>
