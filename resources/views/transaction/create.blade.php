@@ -34,6 +34,12 @@
 									</select>
 								</div>
 
+								<div class="form-group">
+									<label for="">Status</label>
+									<select name="status" id="" class="form-control">
+										<option value="success">Success</option>
+									</select>
+								</div>
 							</div>
 							<div class="col-md-6">
 
@@ -49,7 +55,8 @@
 							</div>
 						</div>
 						<br>
-						<table class="table">
+
+						{{-- <table class="table">
 							<tr>
 								<td>Harga</td>
 								<td><input type="text" id="price" disabled value="Rp.{{$merchandise->first()->price}}"></td>
@@ -58,7 +65,7 @@
 								<td>Potongan</td>
 								<td>Rp 0</td>
 							</tr>
-						</table>
+						</table> --}}
 
 						<button type="submit" class="btn btn-primary">Process</button>
 					</form>

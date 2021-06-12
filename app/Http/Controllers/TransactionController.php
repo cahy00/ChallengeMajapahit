@@ -46,11 +46,11 @@ class TransactionController extends Controller
 				$data->status = 'success';
 				$data->save();
 
-				if($data){
-					$request->request->add(['points' => 5]);
-				}
+				// if($data){
+				// 	$request->request->add(['points' => 5]);
+				// }
 
-				return 'berhasil';
+				return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
     }
 
     /**
