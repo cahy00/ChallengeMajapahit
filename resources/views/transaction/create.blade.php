@@ -57,6 +57,10 @@
 								<td><input type="text" id="price" disabled value="Rp.{{$merchandise->first()->price}}"></td>
 							</tr>
 							<tr>
+								<td>Stock</td>
+								<td><input type="text" id="price" disabled value="{{$merchandise->first()->stock}}"></td>
+							</tr>
+							<tr>
 								<td>Potongan</td>
 								<td>Rp 0</td>
 							</tr>
