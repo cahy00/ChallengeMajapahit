@@ -21,7 +21,7 @@
 			}
 		</style>
 		@yield('style')
-    <title>Hello, world!</title>
+    <title>@yield('title')</title>
   </head>
   <body>
 
