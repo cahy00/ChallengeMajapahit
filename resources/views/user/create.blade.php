@@ -20,10 +20,33 @@
 					<h3 class="card-title">User Create</h3>
 				</div>
 				<div class="card-body">
-					<div class="form-group">
-						<label for="">Nama Lengkap</label>
-						<input type="text" name="name" class="form-control">
-					</div>
+					<form action="{{route('user.create')}}" method="POST">
+						@csrf
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="">Email</label>
+									<input type="email" name="email" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="">Password</label>
+									<input type="password" name="password" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="">Nama Lengkap</label>
+									<input type="text" name="name" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="">Default Point</label>
+									<input type="number" name="points" class="form-control">
+								</div>
+							</div>
+						</div>
+						<br>
+						<button type="submit" class="btn btn-primary">Simpan</button>
+					</form>
 				</div>
 			</div>
 		</div>
