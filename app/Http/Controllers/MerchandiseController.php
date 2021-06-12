@@ -88,7 +88,25 @@ class MerchandiseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+				$validator = Validator::make($request->all(), [
+					'name'  => 'required',
+					'price' => 'required',
+					'stock' => 'required',
+				]);
+
+				if($validator->fails()){
+					return redirect()->back()->withErrors($validator)->withInput();
+				}
+				
+				$merchandise = Merchandise::findOrFail($id);
+				$merchandise->update([
+					'name'  => $request->name,
+					'price' => $request->price,
+					'stock' => $request->stock
+				]);
+
+				return redirect()->route('merchandise.index')->with('success', 'Data Berhasil Di Edit');
+
     }
 
     /**
