@@ -105,7 +105,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 				$user->update([
 					'email' => $request->email,
-					'name' => $request->name
+					'name'  => $request->name
 				]);
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil di Update');
