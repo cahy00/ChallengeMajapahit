@@ -39,8 +39,12 @@ class TransactionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $data = new Transaction;
+    {		
+				$user = User::where('stock', 0);
+        if($user){
+					return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
+				}else{
+					$data = new Transaction;
 				$data->user_id 				= $request->user_id;
 				$data->merchandise_id = $request->merchandise_id;
 				if($data){
@@ -64,6 +68,7 @@ class TransactionController extends Controller
 				} while ($condition);
 
 				return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
+				}
     }
 
     /**
