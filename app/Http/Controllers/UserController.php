@@ -98,6 +98,8 @@ class UserController extends Controller
 					'email' => $request->email,
 					'name' => $request->name
 				]);
+
+				return redirect()->route('user.index')->with('success', 'Data Berhasil di Update');
     }
 
     /**
