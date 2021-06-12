@@ -20,7 +20,7 @@
 					<h3 class="card-title">Tambah Barang</h3>
 				</div>
 				<div class="card-body">
-					<form action="{{route('user.store')}}" method="POST">
+					<form action="{{route('merchandise.store')}}" method="POST">
 						@csrf
 						<div class="row">
 							<div class="col-md-4">
