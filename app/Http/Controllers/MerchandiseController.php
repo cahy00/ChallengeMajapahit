@@ -36,7 +36,23 @@ class MerchandiseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+				$validator = Validator::make($request->all, [
+					'name' => 'required',
+					'price' => 'required',
+					'stock' => 'required',
+				]);
+
+				if($validator->fails()){
+					return redirect()->back()->withErrors($validator)->withInput();
+				}
+
+				$data = Merchandise::create([
+					'name' => $request->name,
+					'price' => $request->price,
+					'stock' => $request->stock,
+				]);
+				
+				return redirect('merchandise.index')->with('success', 'Data Berhasil Di Input');
     }
 
     /**
