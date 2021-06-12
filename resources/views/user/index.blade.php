@@ -28,7 +28,7 @@
 						<form action="{{route('user.index')}}" method="GET">
 							<div class="col-md-6">
 								<div class="input-group">
-										<input type="text" name="keyword" class="form-control" value="" placeholder="Cari Nama" >
+										<input type="text" name="keyword" class="form-control" value="{{Request::get('keyword')}}" placeholder="Cari Nama" >
 										<button type="submit" class="btn btn-success">Cari</button>
 								</div>
 							</div>
@@ -60,7 +60,7 @@
 					</table>
 				</div>
 				<div class="card-footer">
-					{{$user->links()}}
+					{{$user->appends(Request::all())->links()}}
 				</div>
 			</div>
 		</div>

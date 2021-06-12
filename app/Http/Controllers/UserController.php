@@ -18,7 +18,7 @@ class UserController extends Controller
 				$keyword = $request->get('keyword');
 				$user = User::first()->paginate(10);
 				if($request->get('keyword')){
-					$user = User::where('name', 'LIKE', '%' . $keyword . '%')
+					$user = User::where('name', 'LIKE', '%' . $keyword . '%')->paginate(10);
 				}
 				// $check = DB::table('transaction')->where('id', $user->id)->first();
         return view('user.index', \compact('user'));
