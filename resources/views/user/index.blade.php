@@ -41,7 +41,7 @@
 								<td>{{ $item->points }}</td>
 								<td>
 									<a href="{{route('user.edit', $item->id)}}" class="btn btn-warning">Edit</a>
-									<a href="" class="btn btn-danger">Delete</a>
+									<a href="{{route('user.destroy', $item->id)}}" class="btn btn-danger">Delete</a>
 								</td>
 							</tr>
 							@endforeach
