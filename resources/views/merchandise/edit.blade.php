@@ -20,8 +20,9 @@
 					<h3 class="card-title">Edit Barang</h3>
 				</div>
 				<div class="card-body">
-					<form action="{{route('merchandise.store')}}" method="POST">
+					<form action="{{route('merchandise.update', $merchandise->id)}}" method="POST">
 						@csrf
+						@method('put')
 						<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
