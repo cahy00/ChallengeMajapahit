@@ -51,7 +51,7 @@
 						</div>
 						<br>
 
-						{{-- <table class="table">
+						<table class="table">
 							<tr>
 								<td>Harga</td>
 								<td><input type="text" id="price" disabled value="Rp.{{$merchandise->first()->price}}"></td>
@@ -60,7 +60,7 @@
 								<td>Potongan</td>
 								<td>Rp 0</td>
 							</tr>
-						</table> --}}
+						</table>
 
 						<button type="submit" class="btn btn-primary">Process</button>
 					</form>
