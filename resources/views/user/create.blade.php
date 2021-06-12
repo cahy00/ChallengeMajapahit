@@ -20,7 +20,7 @@
 					<h3 class="card-title">User Create</h3>
 				</div>
 				<div class="card-body">
-					<form action="{{route('user.create')}}" method="POST">
+					<form action="{{route('user.store')}}" method="POST">
 						@csrf
 						<div class="row">
 							<div class="col-md-6">
