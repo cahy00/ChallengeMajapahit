@@ -35,12 +35,6 @@
 									</select>
 								</div>
 
-								{{-- <div class="form-group">
-									<label for="">Status</label>
-									<select name="status" id="" class="form-control">
-										<option value="success">Success</option>
-									</select>
-								</div> --}}
 							</div>
 							<div class="col-md-6">
 
