@@ -22,6 +22,7 @@
 				</div>
 				<div class="card-body">
 					@include('alert.success')
+					@include('alert.failed')
 					<table class="table table-bordered">
 						<thead>
 							<tr>

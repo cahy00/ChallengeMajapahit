@@ -42,7 +42,7 @@ class TransactionController extends Controller
     {		
 				$user = User::where('stock', 0);
         if($user){
-					return redirect()->route('transaction.index')->with('failed', 'Data Berhasil Di Input');
+					return redirect()->route('transaction.index')->with('failed', 'Gagal Transaksi Stock tidak cukup');
 				}else{
 					$data = new Transaction;
 				$data->user_id 				= $request->user_id;
