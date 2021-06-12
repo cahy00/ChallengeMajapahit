@@ -21,6 +21,12 @@ class UserController extends Controller
 					$user = User::where('name', 'LIKE', '%' . $keyword . '%')->paginate(10);
 				}
         return view('user.index', \compact('user'));
+
+				//aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $user
+				// ]);
     }
 
     /**
@@ -61,6 +67,12 @@ class UserController extends Controller
 				$user->save();
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil Di Input');
+				
+				//aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $user
+				// ]);
     }
 
     /**
