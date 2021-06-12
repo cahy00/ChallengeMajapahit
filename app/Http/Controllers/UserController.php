@@ -51,7 +51,6 @@ class UserController extends Controller
 				}
 
 				
-				$transaction = Transaction::find(1);
 				$user = new User;
 				$user->name = $request->name;
 				$user->email = $request->email;
