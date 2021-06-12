@@ -30,5 +30,6 @@ Route::get('/merchandise', [MerchandiseController::class, 'index'])->name('merch
  */
 Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
 Route::get('/transaction/create', [TransactionController::class, 'create'])->name('transaction.create');
+Route::post('/transaction/store', [TransactionController::class, 'store'])->name('transaction.store');
 Route::get('/transaction/merc/{id}', [TransactionController::class, 'create'])->name('transaction.merc');
 
