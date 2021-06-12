@@ -43,7 +43,7 @@
 								<td>{{ $item->stock }}</td>
 								<td>
 									<a href="{{route('merchandise.edit', $item->id)}}" class="btn btn-warning">Edit</a>
-									<a href="" class="btn btn-danger">Delete</a>
+									<a href="{{route('merchandise.destroy', $item->id)}}" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus??')" >Delete</a>
 								</td>
 							</tr>
 							@endforeach
