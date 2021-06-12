@@ -29,16 +29,16 @@
 									<input type="email" name="email" class="form-control {{$errors->first('email') ? 'is-invalid' : ''}}" placeholder="Masukkan Email" value="{{$user->email}}">
 									<span class="error invalid-feedback">{{$errors->first('email')}}</span>
 								</div>
-								<div class="form-group">
+								{{-- <div class="form-group">
 									<label for="">Password</label>
-									<input type="password" name="password" class="form-control {{$errors->first('password') ? 'is-invalid' : ''}}" placeholder="Masukkan Password">
+									<input type="password" name="password" class="form-control {{$errors->first('password') ? 'is-invalid' : ''}}" placeholder="Masukkan Password" value="{{$user->password}}">
 									<span class="error invalid-feedback">{{$errors->first('password')}}</span>
-								</div>
+								</div> --}}
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Nama Lengkap</label>
-									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan Nama">
+									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan Nama" value="{{$user->name}}">
 									<span class="error invalid-feedback">{{$errors->first('name')}}</span>
 								</div>
 							</div>
