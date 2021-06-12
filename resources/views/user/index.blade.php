@@ -24,6 +24,17 @@
 					@include('alert.success')
 					<a href="{{route('user.create')}}" class="btn btn-primary float-right">Tambah Data</a>
 					<hr>
+					<div class="row">
+						<form action="{{route('user.index')}}" method="GET">
+							<div class="col-md-6">
+								<div class="input-group">
+										<input type="text" name="keyword" class="form-control" value="" placeholder="Cari Nama" >
+										<button type="submit" class="btn btn-success">Cari</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<br>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
