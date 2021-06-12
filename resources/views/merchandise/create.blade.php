@@ -34,14 +34,13 @@
 									<input type="password" name="password" class="form-control {{$errors->first('password') ? 'is-invalid' : ''}}" placeholder="Masukkan Password">
 									<span class="error invalid-feedback">{{$errors->first('password')}}</span>
 								</div>
-							</div>
-							<div class="col-md-6">
 								<div class="form-group">
-									<label for="">Nama Lengkap</label>
-									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan Nama">
-									<span class="error invalid-feedback">{{$errors->first('name')}}</span>
+									<label for="">Stock</label>
+									<input type="stock" name="stock" class="form-control {{$errors->first('stock') ? 'is-invalid' : ''}}" placeholder="Masukkan stock">
+									<span class="error invalid-feedback">{{$errors->first('stock')}}</span>
 								</div>
 							</div>
+							
 						</div>
 						<br>
 						<button type="submit" class="btn btn-primary">Simpan</button>
