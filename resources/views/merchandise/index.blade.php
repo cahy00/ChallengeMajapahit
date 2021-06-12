@@ -21,6 +21,9 @@
 					<h3 class="card-title">Barang</h3>
 				</div>
 				<div class="card-body">
+					@include('alert.success')
+					<a href="{{route('merchandise.create')}}" class="btn btn-primary float-right">Tambah Data</a>
+					<hr>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
