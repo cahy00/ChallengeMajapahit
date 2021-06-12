@@ -16,11 +16,10 @@ class UserController extends Controller
     public function index(Request $request)
     {
 				$keyword = $request->get('keyword');
-				$user = User::first()->paginate(10);
+				$user    = User::first()->paginate(10);
 				if($request->get('keyword')){
 					$user = User::where('name', 'LIKE', '%' . $keyword . '%')->paginate(10);
 				}
-				// $check = DB::table('transaction')->where('id', $user->id)->first();
         return view('user.index', \compact('user'));
     }
 
