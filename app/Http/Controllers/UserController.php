@@ -39,10 +39,10 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-					'name' => 'required|string|max:30',
-					'email' => 'required|email|unique:users',
+					'name'     => 'required|string|max:30',
+					'email'    => 'required|email|unique:users',
 					'password' => 'required|min:6|max:30',
-					'points' => 'sometimes',
+					'points'   => 'sometimes',
 				]);
 
 				if($validator->fails())
@@ -51,10 +51,10 @@ class UserController extends Controller
 				}
 
 				$user = User::create([
-					'name' => $request->name,
-					'email' => $request->email,
+					'name'     => $request->name,
+					'email'    => $request->email,
 					'password' => $request->password,
-					'points' => $request->points
+					'points'   => $request->points
 				]);
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil Di Input');
