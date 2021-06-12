@@ -22,7 +22,7 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        return [s
+        return [
 						'name' => $this->faker->name(),
 						'email' => $this->faker->unique()->safeEmail(),
 						'password' => \Hash::make('rahasia'),
