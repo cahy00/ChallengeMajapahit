@@ -26,11 +26,13 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Email</label>
-									<input type="email" name="email" class="form-control">
+									<input type="email" name="email" class="form-control {{$errors->first('email') ? 'is-invalid' : ''}}">
+									<span class="error invalid-feedback">{{$errors->first('email')}}</span>
 								</div>
 								<div class="form-group">
 									<label for="">Password</label>
-									<input type="password" name="password" class="form-control">
+									<input type="password" name="password" class="form-control {{$errors->first('password') ? 'is-invalid' : ''}}">
+									<span class="error invalid-feedback">{{$errors->first('password')}}</span>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -41,7 +43,8 @@
 								</div>
 								<div class="form-group">
 									<label for="">Default Point</label>
-									<input type="number" name="points" class="form-control">
+									<input type="number" name="points" class="form-control {{$errors->first('points') ? 'is-invalid' : ''}}">
+									<span class="error invalid-feedback">{{$errors->first('points')}}</span>
 								</div>
 							</div>
 						</div>

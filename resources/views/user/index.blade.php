@@ -21,6 +21,7 @@
 					<h3 class="card-title">User</h3>
 				</div>
 				<div class="card-body">
+					@include('alert.success')
 					<a href="{{route('user.create')}}" class="btn btn-primary float-right">Tambah Data</a>
 					<hr>
 					<table class="table table-bordered">
