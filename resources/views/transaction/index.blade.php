@@ -46,7 +46,7 @@
 					</table>
 				</div>
 				<div class="card-footer">
-					{{-- {{$data->links()}} --}}
+					{{$data->links()}}
 				</div>
 			</div>
 		</div>

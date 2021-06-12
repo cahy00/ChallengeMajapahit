@@ -21,7 +21,8 @@
 					<h3 class="card-title">User</h3>
 				</div>
 				<div class="card-body">
-					<form action="">
+					<form action="{{route('transaction.store')}}" method="POST">
+						@csrf
 						<div class="row">
 							<div class="col-md-6">
 
@@ -34,12 +35,12 @@
 									</select>
 								</div>
 
-								<div class="form-group">
+								{{-- <div class="form-group">
 									<label for="">Status</label>
 									<select name="status" id="" class="form-control">
 										<option value="success">Success</option>
 									</select>
-								</div>
+								</div> --}}
 							</div>
 							<div class="col-md-6">
 

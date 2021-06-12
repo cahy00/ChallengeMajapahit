@@ -41,14 +41,28 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         $data = new Transaction;
-				$data->user_id = $request->user_id;
+				$data->user_id 				= $request->user_id;
 				$data->merchandise_id = $request->merchandise_id;
-				$data->status = 'success';
+				if($data){
+					$data->status = 'success';
+				}else{
+					$data->status = 'failed';
+				}
 				$data->save();
 
-				// if($data){
-				// 	$request->request->add(['points' => 5]);
-				// }
+				$user = User::find($request->user_id);
+
+				$condition = true;
+				$i = 5;
+				do {
+					if($data){
+						$user->update([
+							'points' => $i++
+						]);
+
+						$condition = false;
+					}
+				} while ($condition);
 
 				return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
     }
