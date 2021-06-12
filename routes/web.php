@@ -20,12 +20,15 @@ Route::put('/user/update/{id}', [UserController::class, 'update'])->name('user.u
 Route::get('/user/destroy/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 
 
-
-
 /**
  * *Route Barang
  */
 Route::get('/merchandise', [MerchandiseController::class, 'index'])->name('merchandise.index');
+Route::get('/merchandise/create', [MerchandiseController::class, 'create'])->name('merchandise.create');
+Route::post('/merchandise/store', [MerchandiseController::class, 'store'])->name('merchandise.store');
+Route::get('/merchandise/edit/{id}', [MerchandiseController::class, 'edit'])->name('merchandise.edit');
+Route::put('/merchandise/update/{id}', [MerchandiseController::class, 'update'])->name('merchandise.update');
+Route::get('/merchandise/destroy/{id}', [MerchandiseController::class, 'destroy'])->name('merchandise.destroy');
 
 
 /**
