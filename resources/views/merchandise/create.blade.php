@@ -17,7 +17,7 @@
 		<div class="col-md">
 			<div class="card">
 				<div class="card-header bg-primary">
-					<h3 class="card-title">User Create</h3>
+					<h3 class="card-title">Tambah Barang</h3>
 				</div>
 				<div class="card-body">
 					<form action="{{route('user.store')}}" method="POST">
@@ -45,10 +45,10 @@
 									</div>
 								</div>
 							</div>
-							
-						</div>
 						<br>
 						<button type="submit" class="btn btn-primary">Simpan</button>
+							
+						</div>
 					</form>
 				</div>
 			</div>
