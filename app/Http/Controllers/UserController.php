@@ -49,7 +49,6 @@ class UserController extends Controller
 				{
 						return redirect()->back()->withErrors($validator)->withInput();
 				}
-
 				
 				$user = new User;
 				$user->name = $request->name;
@@ -93,6 +92,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+			$validator = Validator::make($request->all(), [
+				'name'     => 'required|string|max:30',
+				'email'    => 'required|email|unique:users',
+			]);
+
+			if($validator->fails())
+			{
+					return redirect()->back()->withErrors($validator)->withInput();
+			}
+
         $user = User::findOrFail($id);
 				$user->update([
 					'email' => $request->email,
