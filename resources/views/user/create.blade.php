@@ -41,11 +41,6 @@
 									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan Nama">
 									<span class="error invalid-feedback">{{$errors->first('name')}}</span>
 								</div>
-								<div class="form-group">
-									<label for="">Default Point</label>
-									<input type="number" name="points" class="form-control {{$errors->first('points') ? 'is-invalid' : ''}}" placeholder="Masukkan Points">
-									<span class="error invalid-feedback">{{$errors->first('points')}}</span>
-								</div>
 							</div>
 						</div>
 						<br>
