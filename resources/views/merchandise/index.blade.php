@@ -1,5 +1,9 @@
 @extends('templates.main')
 
+@section('title')
+		Barang
+@endsection
+
 @section('style')
 <style>
 	.container{
