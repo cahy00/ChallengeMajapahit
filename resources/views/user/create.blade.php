@@ -1,5 +1,9 @@
 @extends('templates.main')
 
+@section('title')
+		User
+@endsection
+
 @section('style')
 <style>
 	.container{
