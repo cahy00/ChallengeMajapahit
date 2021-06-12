@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Merchandise;
+use Validator;
 
 class MerchandiseController extends Controller
 {
@@ -36,7 +37,7 @@ class MerchandiseController extends Controller
      */
     public function store(Request $request)
     {
-				$validator = Validator::make($request->all, [
+				$validator = Validator::make($request->all(), [
 					'name'  => 'required',
 					'price' => 'required',
 					'stock' => 'required',
@@ -52,7 +53,7 @@ class MerchandiseController extends Controller
 					'stock' => $request->stock,
 				]);
 				
-				return redirect('merchandise.index')->with('success', 'Data Berhasil Di Input');
+				return redirect()->route('merchandise.index')->with('success', 'Data Berhasil Di Input');
     }
 
     /**
