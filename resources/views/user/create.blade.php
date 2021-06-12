@@ -36,7 +36,8 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="">Nama Lengkap</label>
-									<input type="text" name="name" class="form-control">
+									<input type="text" name="name" class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}" placeholder="Masukkan Nama">
+									<span class="error invalid-feedback">{{$errors->first('name')}}</span>
 								</div>
 								<div class="form-group">
 									<label for="">Default Point</label>
