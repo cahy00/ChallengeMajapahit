@@ -1,5 +1,9 @@
 @extends('templates.main')
 
+@section('title')
+		Transaksi
+@endsection
+
 @section('style')
 <style>
 	.container{
