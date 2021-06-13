@@ -83,7 +83,12 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::select('points')->where('id', $id)->get();
+				return response()->json([
+					'message' => 'Point anda sebanyak',
+					'data' => $user
+				]);
+				// return view('user.show', compact('user'));
     }
 
     /**

@@ -20,6 +20,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
 Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
+Route::get('/user/show/{id}', [UserController::class, 'show'])->name('user.show');
 Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
 Route::put('/user/update/{id}', [UserController::class, 'update'])->name('user.update');
 Route::get('/user/destroy/{id}', [UserController::class, 'destroy'])->name('user.destroy');
