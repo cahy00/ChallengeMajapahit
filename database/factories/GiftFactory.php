@@ -22,7 +22,10 @@ class GiftFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'  => 'Boneka',
+						'points'=> 50,
+						'user_id' => 1,
+						'status' => 'available'
         ];
     }
 }
