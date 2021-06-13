@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Merchandise;
 use App\Models\Transaction;
+use Illuminate\Support\Facades\DB;
+
 
 class TransactionController extends Controller
 {
@@ -40,8 +42,10 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {		
-				$user = User::where('stock', 0);
-        if($user){
+				$a = DB::table('merchandises')->select('stock')->where('stock', '>=', 1)->get();
+				// $a = Merchandise::get();
+				// $a = $request->merchandise->stock;
+        if(!$a){
 					return redirect()->route('transaction.index')->with('failed', 'Gagal Transaksi Stock tidak cukup');
 				}else{
 					$data = new Transaction;
@@ -60,7 +64,7 @@ class TransactionController extends Controller
 						if($data){
 						$user = User::find($request->user_id);
 						$user->update([
-								'points' => $i++
+								'points' => $i = $i+$i
 							]);
 
 							$condition = false;
