@@ -56,6 +56,7 @@
 								<td>{{ $item->name }}</td>
 								<td>{{ $item->points }}</td>
 								<td>
+									{{-- <a href="{{route('user.show', $item->id)}}" class="btn btn-success">Lihat Hadiah</a> --}}
 									<a href="{{route('user.edit', $item->id)}}" class="btn btn-warning">Edit</a>
 									<a href="{{route('user.destroy', $item->id)}}" class="btn btn-danger">Delete</a>
 								</td>

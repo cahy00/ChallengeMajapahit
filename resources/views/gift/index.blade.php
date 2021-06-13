@@ -57,7 +57,8 @@
 								<td>{{ $item->points }}</td>
 								<td><span class="badge @if($item->status == 'available') bg-success @else bg-danger @endif">{{$item->status}}</span></td>
 								<td>
-									<a href="" class="btn @if($item->status == 'available') btn-warning @else disable @endif">Claim</a>
+									<a href="" class="btn btn-warning">Edit</a>
+									<a href="" class="btn btn-danger">Delete</a>
 								</td>
 							</tr>
 							@endforeach

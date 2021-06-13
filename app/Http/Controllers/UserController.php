@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Gift;
 use Validator;
 
 class UserController extends Controller
@@ -83,12 +84,13 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::select('points')->where('id', $id)->get();
-				return response()->json([
-					'message' => 'Point anda sebanyak',
-					'data' => $user
-				]);
-				// return view('user.show', compact('user'));
+        // $user = User::select('points')->where('id', $id)->get();
+				return view('gift.index');
+				
+				// return response()->json([
+				// 	'message' => 'Point anda sebanyak',
+				// 	'data' => $user
+				// ]);
     }
 
     /**
