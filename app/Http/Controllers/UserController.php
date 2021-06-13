@@ -103,6 +103,12 @@ class UserController extends Controller
     {
 				$user = User::findOrFail($id);
         return view('user.edit', ['user' => $user]);
+
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $user
+				// ]);
     }
 
     /**
@@ -151,7 +157,11 @@ class UserController extends Controller
 				$user->delete();
 
 				return redirect()->route('user.index')->with('success', 'Data Berhasil di Hapus');
-
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $user
+				// ]);
     }
 
 }
