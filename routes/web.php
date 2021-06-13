@@ -4,10 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\MerchandiseController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('templates.main');
-});
+
+/**
+ * Route Home
+ */
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+
 
 /**
  * *Route User
