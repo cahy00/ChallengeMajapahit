@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\MerchandiseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GiftController;
 
 
 /**
