@@ -42,3 +42,9 @@ Route::get('/transaction', [TransactionController::class, 'index'])->name('trans
 Route::get('/transaction/create', [TransactionController::class, 'create'])->name('transaction.create');
 Route::post('/transaction/store', [TransactionController::class, 'store'])->name('transaction.store');
 
+/**
+ * Route Gift
+ */
+Route::get('/gift', [GiftController::class, 'index'])->name('gift.index');
+
+

@@ -25,7 +25,7 @@
 							<li><a class="dropdown-item" href="/transaction">Riwayat Transaksi</a></li>
 							<li><a class="dropdown-item" href="/transaction/create">POS</a></li>
 							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="#">Hadiah</a></li>
+							<li><a class="dropdown-item" href="/gift">Hadiah</a></li>
 						</ul>
 					</li>
 				</ul>
