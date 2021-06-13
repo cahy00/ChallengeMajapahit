@@ -17,6 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->id();
 						$table->unsignedBigInteger('user_id');
 						$table->unsignedBigInteger('merchandise_id');
+						// $table->foreign('merchandise_id')->references('id')->on('merchandises')->onDelete('cascade');
 						$table->enum('status', ['success', 'pending', 'fail'])->nullable();
             $table->timestamps();
         });

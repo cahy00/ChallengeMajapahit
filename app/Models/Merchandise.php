@@ -12,4 +12,9 @@ class Merchandise extends Model
 		protected $fillable = [
 			'name', 'price', 'stock'
 		];
+
+		public function transaction()
+		{
+				return $this->hasMany(Transaction::class);
+		}
 }

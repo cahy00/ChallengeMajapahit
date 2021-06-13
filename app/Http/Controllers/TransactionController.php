@@ -59,17 +59,19 @@ class TransactionController extends Controller
 					$data->save();
 
 					$condition = true;
+					$count = Transaction::select('user_id', $request->user_id)->count();
 					$i = 5;
 					do {
 						if($data){
 						$user = User::find($request->user_id);
 						$user->update([
-								'points' => $i = $i+$i
+								'points' => $count * $i
 							]);
 
 							$condition = false;
 						}
 					} while ($condition);
+					
 
 					return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
 				}

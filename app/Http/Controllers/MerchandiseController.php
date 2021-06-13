@@ -122,6 +122,7 @@ class MerchandiseController extends Controller
     public function destroy($id)
     {
         $data = Merchandise::findOrFail($id);
+				$data->transaction()->delete();
 				$data->delete();
 
 				return redirect()->route('merchandise.index')->with('success', 'Data Berhasil Di Hapus');
