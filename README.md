@@ -13,6 +13,10 @@ Do the following commands for installing
 
 Create a database and import laravel_majapahit.sql
 Setting database name, username, and password in your .env file
+After you setting database
+
+-   php artisan migrate --seed
+
 Do the following instructions if you're done setting database in .env
 
 -   php artisan jwt:secret (optional)
