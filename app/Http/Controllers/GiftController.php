@@ -8,7 +8,7 @@ class GiftController extends Controller
 {
     public function index()
 		{
-				$gift = Gift::get();
+				$gift = Gift::first()->paginate();
 				return view('gift.index', ['gift' => $gift]);
 		}
 }
