@@ -27,10 +27,9 @@
 				</div>
 				<div class="card-body">
 					@include('alert.success')
-					<a href="{{route('user.create')}}" class="btn btn-primary float-right">Tambah Data</a>
 					<hr>
 					<div class="row">
-						<form action="{{route('user.index')}}" method="GET">
+						<form action="{{route('gift.index')}}" method="GET">
 							<div class="col-md-6">
 								<div class="input-group">
 										<input type="text" name="keyword" class="form-control" value="{{Request::get('keyword')}}" placeholder="Cari Nama" >

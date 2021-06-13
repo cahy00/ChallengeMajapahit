@@ -28,6 +28,15 @@
 					@include('alert.success')
 					<a href="{{route('merchandise.create')}}" class="btn btn-primary float-right">Tambah Data</a>
 					<hr>
+					<form action="{{route('merchandise.index')}}" method="GET">
+						<div class="col-md-6">
+							<div class="input-group">
+									<input type="text" name="keyword" class="form-control" value="{{Request::get('keyword')}}" placeholder="Cari Nama" >
+									<button type="submit" class="btn btn-success">Cari</button>
+							</div>
+						</div>
+					</form>
+					<br>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
@@ -55,7 +64,7 @@
 					</table>
 				</div>
 				<div class="card-footer">
-					{{$data->links()}}
+					{{$data->appends(Request::all())->links()}}
 				</div>
 			</div>
 		</div>

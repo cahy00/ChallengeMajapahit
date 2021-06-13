@@ -13,9 +13,13 @@ class MerchandiseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $data = Merchandise::first()->paginate(10);
+				$keyword = $request->get('keyword');
+				if($keyword){
+					$data = Merchandise::where('name', 'LIKE', '%' . $keyword . '%')->paginate(10);
+				}
 				return view('merchandise.index', compact('data'));
     }
 
