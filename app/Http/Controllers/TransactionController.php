@@ -20,6 +20,12 @@ class TransactionController extends Controller
     {
 				$data = Transaction::first()->paginate(10);
         return view('transaction.index', compact('data'));
+
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $data
+				// ]);
     }
 
     /**
@@ -68,6 +74,12 @@ class TransactionController extends Controller
 					
 
 					return redirect()->route('transaction.index')->with('success', 'Data Berhasil Di Input');
+
+					// aktifkan code berikut untuk penggunaan API
+					// return response()->json([
+					// 	'message' => 'Data Ada',
+					// 	'data' => $data
+					// ]);
 				}
     }
 

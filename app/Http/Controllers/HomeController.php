@@ -15,5 +15,10 @@ class HomeController extends Controller
 			$merchandise = Merchandise::get();
 			$transaction = Transaction::get();
 			return view('home.index', compact('user', 'merchandise', 'transaction'));
+			// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $user
+				// ]);
 		}
 }

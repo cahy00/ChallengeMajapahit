@@ -21,6 +21,11 @@ class MerchandiseController extends Controller
 					$data = Merchandise::where('name', 'LIKE', '%' . $keyword . '%')->paginate(10);
 				}
 				return view('merchandise.index', compact('data'));
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $data
+				// ]);
     }
 
     /**
@@ -58,6 +63,11 @@ class MerchandiseController extends Controller
 				]);
 				
 				return redirect()->route('merchandise.index')->with('success', 'Data Berhasil Di Input');
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $data
+				// ]);
     }
 
     /**
@@ -81,6 +91,11 @@ class MerchandiseController extends Controller
     {
 				$merchandise = Merchandise::findOrFail($id);
         return view('merchandise.edit', compact('merchandise'));
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $data
+				// ]);
     }
 
     /**
@@ -110,7 +125,11 @@ class MerchandiseController extends Controller
 				]);
 
 				return redirect()->route('merchandise.index')->with('success', 'Data Berhasil Di Edit');
-
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $data
+				// ]);
     }
 
     /**
@@ -126,6 +145,10 @@ class MerchandiseController extends Controller
 				$data->delete();
 
 				return redirect()->route('merchandise.index')->with('success', 'Data Berhasil Di Hapus');
-				
+				// aktifkan code berikut untuk penggunaan API
+				// return response()->json([
+				// 	'message' => 'Data Ada',
+				// 	'data' => $data
+				// ]);
     }
 }
