@@ -2,7 +2,7 @@
 @extends('templates.main')
 
 @section('title')
-		Barang
+		Home
 @endsection
 
 @section('style')

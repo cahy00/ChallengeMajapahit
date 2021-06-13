@@ -1,7 +1,7 @@
 @extends('templates.main')
 
 @section('title')
-		User
+		Hadiah
 @endsection
 
 
@@ -46,6 +46,7 @@
 								<td>No</td>
 								<td>Nama</td>
 								<td>Points</td>
+								<td>Status</td>
 								<td>Action</td>
 							</tr>
 						</thead>
@@ -55,9 +56,9 @@
 								<td>{{ $loop->iteration + ($gift->perPage() * ($gift->currentPage() - 1)) }}</td>
 								<td>{{ $item->name }}</td>
 								<td>{{ $item->points }}</td>
+								<td><span class="badge @if($item->status == 'available') bg-success @else bg-danger @endif">{{$item->status}}</span></td>
 								<td>
-									{{-- <a href="{{route('gift.edit', $item->id)}}" class="btn btn-warning">Edit</a>
-									<a href="{{route('gift.destroy', $item->id)}}" class="btn btn-danger">Delete</a> --}}
+									<a href="" class="btn @if($item->status == 'available') btn-warning @else disable @endif">Claim</a>
 								</td>
 							</tr>
 							@endforeach
