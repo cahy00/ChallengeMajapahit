@@ -35,6 +35,7 @@
 			</section>
 
 
+			<br>
 
 			@include('templates.footer')
 		</div>
