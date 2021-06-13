@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Gift extends Model
 {
     use HasFactory;
+		protected $fillable = [
+			'name', 'points', 'user_id', 'status'
+		];
+
+		public function user()
+		{
+				return $this->belongsTo(User::class);
+		}
 }

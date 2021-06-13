@@ -15,6 +15,10 @@ class CreateGiftsTable extends Migration
     {
         Schema::create('gifts', function (Blueprint $table) {
             $table->id();
+						$table->string('name');
+						$table->integer('points');
+						$table->unsignedBigInteger('user_id');
+						$table->enum('status', ['available', 'none']);
             $table->timestamps();
         });
     }
