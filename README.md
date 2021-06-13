@@ -15,7 +15,7 @@ Create a database and import laravel_majapahit.sql
 Setting database name, username, and password in your .env file
 Do the following instructions if you're done setting database in .env
 
--   php artisan jwt:secret
+-   php artisan jwt:secret (optional)
 -   php artisan config:cache
 
 To run the application
